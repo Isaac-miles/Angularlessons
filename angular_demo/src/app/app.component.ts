@@ -8,10 +8,17 @@ import { HeaderComponent } from './components/header/header.component';
   imports: [RouterOutlet,HomeComponent,HeaderComponent],
   template: `
     <app-header />
-    <app-home />
-    <router-outlet />
+    <main>
+      <app-home />
+    </main>
   `,
-  styles: [],
+  styles: [
+    `
+      main {
+        padding: 16px;
+      }
+    `,
+  ],
 })
 export class AppComponent {
   title = 'angular_demo';
