@@ -7,5 +7,5 @@ import { Component, input } from '@angular/core';
   styleUrl: './greeting.component.scss'
 })
 export class GreetingComponent {
-  greetingMessage = input('default greet');
+  greetingMessage = input('Welcome to Miles Enterprise');
 }

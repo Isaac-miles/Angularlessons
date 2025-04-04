@@ -8,5 +8,5 @@ import { GreetingComponent } from '../components/greeting/greeting.component';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  greetingMessage = signal("From Home to greeting");
+  homeMessage = signal("From Home to greeting");
 }
