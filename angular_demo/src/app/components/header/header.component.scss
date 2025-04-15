@@ -6,14 +6,26 @@ header{
     text-align: center;
     padding: 5px;
     margin-bottom: 1px;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul{
+        display: flex;
+        gap: 10px;   
+        justify-content: space-between;
+        align-items: center;
+    }
+    li{
+        list-style: none;
+        cursor: pointer;
+        color: #fff;
+        &:hover{
+            color: #497848;
+        }
+    }
 }
-header nav ul{
-    display: flex;
-    gap: 10px;   
-    justify-content: space-between;
-    align-items: center;
-}
-header nav ul li{
-    list-style: none;
-    cursor: pointer;
-}
+
