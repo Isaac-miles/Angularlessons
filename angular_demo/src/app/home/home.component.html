@@ -1,5 +1,3 @@
-<p>home works!</p>
-
 <app-greeting [greetingMessage]="homeMessage()"/>
-
+<app-counter  (increment)="incrementCounter()"></app-counter>
 <input type="text" (keyup)="keyUpHandler($event)" placeholder="Enter a message"/>
