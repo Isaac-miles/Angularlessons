@@ -5,7 +5,7 @@ import { ITodo } from '../model/todo.type';
   providedIn: 'root'
 })
 export class TodosService {
-  todoItems: Array<ITodo> = [
+ private todoItems: Array<ITodo> = [
     {
       id: 1,
       title: 'Todo 1',
