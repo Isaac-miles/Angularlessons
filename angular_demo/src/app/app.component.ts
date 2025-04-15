@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 
 @Component({
@@ -9,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
   template: `
     <app-header />
     <main>
+      <router-outlet />
     </main>
   `,
   styles: [
