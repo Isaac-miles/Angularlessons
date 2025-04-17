@@ -3,7 +3,7 @@
 <p *ngIf="!todoItems().length">loading items...</p>
 <ul class="todos">
   @for(todo of todoItems().slice(0,30); track todo.id){
-    <app-todo-item [todo]="todo"/>
+    <app-todo-item (todoToggled)="updateTodo($event)" [todo]="todo"/>
   }
 </ul>
 

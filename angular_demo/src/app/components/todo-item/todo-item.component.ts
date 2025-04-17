@@ -13,6 +13,6 @@ export class TodoItemComponent {
   todoToggled = output<ITodo>();
 
   todoClicked(){
-    
+    this.todoToggled.emit(this.todo());
   }
 }

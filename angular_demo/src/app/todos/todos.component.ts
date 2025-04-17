@@ -28,4 +28,18 @@ by: any;
       this.todoItems.set(todos)
     });
   }
+
+  updateTodo(todoItem:ITodo){
+    this.todoItems.update((todos)=>{
+      return todos.map((todo)=>{
+        if(todo.id === todoItem.id){
+          return {
+            ...todo,
+            completed: !todo.completed
+          }
+        }
+        return todo
+      })
+    })
+  }
 }
