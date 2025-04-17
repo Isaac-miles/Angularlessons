@@ -1,5 +1,5 @@
 
-<li class="todo__item" [class.completed]="todo().completed">
+<li appHighlightCompletedTodo [isCompleted]="todo().completed" class="todo__item" [class.completed]="todo().completed">
     <label class="todo__container">
       <input type="checkbox" [checked]="todo().completed" class="todo__checkbox" />
       <span class="todo__checkmark"></span>
