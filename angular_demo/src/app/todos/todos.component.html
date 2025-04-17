@@ -1,3 +1,19 @@
-@for (todo of todoItems(); track todo.id){
-  <p>{{todo.title}}</p>
-}
+<h4 class="todo-header">My Todo List</h4>
+
+<ul class="todos">
+  @for(todo of todoItems().slice(0,30); track todo.id){
+    <li class="todo__item" [class.completed]="todo.completed">
+      <label class="todo__container">
+        <input type="checkbox" [checked]="todo.completed" class="todo__checkbox" />
+        <span class="todo__checkmark"></span>
+        <h5 class="todo__title">{{todo.title}}</h5>
+      </label>
+      <button class="todo__delete">×</button>
+    </li>
+  }
+</ul>
+
+<div class="todo__add">
+  <input type="text" placeholder="Add new task..." class="todo__input" />
+  <button class="todo__submit">Add</button>
+</div>
