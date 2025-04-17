@@ -11,9 +11,16 @@ import { ITodo } from '../model/todo.type';
 export class TodosComponent implements OnInit {
   todoService = inject(TodosService);
   todoItems = signal<Array<ITodo>>([])
+by: any;
 
   ngOnInit(): void {
-    console.log(this.todoService.getTodos())
-    this.todoItems.set(this.todoService.getTodos())
+    this.todoService.getTodos()
+    .pipe((err)=>{
+      console.log(err);
+      throw err
+    })
+    .subscribe(todos=>{
+      this.todoItems.set(todos)
+    });
   }
 }
