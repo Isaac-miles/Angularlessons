@@ -3,11 +3,11 @@
 <p *ngIf="!todoItems().length">loading items...</p>
 <ul class="todos">
   @for(todo of todoItems().slice(0,30); track todo.id){
- 
+    <app-todo-item [todo]="todo"/>
   }
 </ul>
 
-<div class="todo__add">
+<!-- <div class="todo__add">
   <input type="text" placeholder="Add new task..." class="todo__input" />
   <button class="todo__submit">Add</button>
-</div>
+</div> -->
