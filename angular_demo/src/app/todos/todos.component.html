@@ -1,5 +1,6 @@
 <h4 class="todo-header">My Todo List</h4>
 
+<p *ngIf="!todoItems().length">loading items...</p>
 <ul class="todos">
   @for(todo of todoItems().slice(0,30); track todo.id){
     <li class="todo__item" [class.completed]="todo.completed">
