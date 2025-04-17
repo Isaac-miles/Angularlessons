@@ -3,14 +3,7 @@
 <p *ngIf="!todoItems().length">loading items...</p>
 <ul class="todos">
   @for(todo of todoItems().slice(0,30); track todo.id){
-    <li class="todo__item" [class.completed]="todo.completed">
-      <label class="todo__container">
-        <input type="checkbox" [checked]="todo.completed" class="todo__checkbox" />
-        <span class="todo__checkmark"></span>
-        <h5 class="todo__title">{{todo.title}}</h5>
-      </label>
-      <button class="todo__delete">×</button>
-    </li>
+ 
   }
 </ul>
 
