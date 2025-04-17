@@ -5,10 +5,11 @@ import { catchError } from 'rxjs';
 import { NgIf } from '@angular/common';
 import { TodoItemComponent } from '../components/todo-item/todo-item.component';
 import { FormsModule } from '@angular/forms';
+import { FilterTodosPipe } from '../pipes/filter-todos.pipe';
 
 @Component({
   selector: 'app-todos',
-  imports: [NgIf,TodoItemComponent,FormsModule],
+  imports: [NgIf,TodoItemComponent,FormsModule,FilterTodosPipe],
   templateUrl: './todos.component.html',
   styleUrl: './todos.component.scss'
 })
